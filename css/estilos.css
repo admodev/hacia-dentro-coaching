@@ -315,6 +315,10 @@ p {
   margin-left: 560px;
 }
 
+.live-mobile {
+  display: none;
+}
+
 @media (min-width: 250px) and (max-width: 991.98px) {
   .rinoceronte-left-side {
     position: relative;
@@ -332,23 +336,21 @@ p {
     }
 
   .live {
-    display: none;
     position: absolute;
-    margin-top: 450px;
-    margin-left: 20px;
+    width: 100px;
+    margin-top: 385px;
+    margin-left: 170px;
   }
 
   .whatsapp {
-    display: none;
     position: absolute;
-    margin-top: -535px;
-    margin-left: 100px;
+    width: 100px;
+    margin-top: 380px;
+    margin-left: 280px;
   }
 
   .btn-register {
-    margin-top: 400px;
-    margin-left: 100px;
-    margin-bottom: 25px;
+    display: none;
   }
 
   .row-horizontal {
@@ -434,6 +436,15 @@ p {
    justify-content: center;
    margin-top: -120px;
    margin-left: -20px;
+  }
+
+  .live-mobile {
+    display: initial;
+    text-decoration: none;
+  }
+
+  .live-mobile:hover {
+    text-decoration: none;
   }
 
   select#country.form-control {
