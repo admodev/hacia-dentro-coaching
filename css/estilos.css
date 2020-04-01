@@ -447,6 +447,13 @@ p {
     text-decoration: none;
   }
 
+  .vivenciales {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+  }
+
   select#country.form-control {
     width: 60px
   }
