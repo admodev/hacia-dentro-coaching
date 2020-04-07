@@ -1,10 +1,34 @@
+<?php 
+  session_start(); 
+
+  if (!isset($_SESSION['username'])) {
+  	$_SESSION['msg'] = "Primero tenés que iniciar sesión.";
+  	header('location: login.php');
+  }
+  if (isset($_GET['logout'])) {
+  	session_destroy();
+  	unset($_SESSION['username']);
+  	header("location: login.php");
+  }
+
+  $indexredirect = "./index.php";
+
+  $perfil = "./perfil.php";
+  
+  $registrarse = "./register.php";
+
+  $vivenciales = "./vivenciales.php";
+
+?>
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>HaciaDentro Coaching</title>
-    <link rel="stylesheet" href="./node_modules/normalize.css/normalize.css">
+    <link rel="stylesheet" type="text/css" href="style.css">
+	<link rel="stylesheet" href="./node_modules/normalize.css/normalize.css">
     <link rel="stylesheet" href="./css/bootstrap.min.css">
     <link rel="stylesheet" href="./css/estilos.css">
     <link href="https://fonts.googleapis.com/css?family=Bebas+Neue|Roboto:400,700&display=swap" rel="stylesheet">
@@ -21,10 +45,10 @@
     <script src="./src/index.js"></script>
 </head>
 <body>
-    <header id="header">
+<header id="header">
         <div class="navbar" id="navbar">
             <nav class="navbar navbar-expand-lg navbar-light">
-                <a class="navbar-brand" href="./index.html"><img src="./img/logo.jpg" alt="logo" class="logo-menu"></a>
+                <a class="navbar-brand" href="<?php echo $indexredirect; ?>"><img src="./img/logo.jpg" alt="logo" class="logo-menu"></a>
                 <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarColor03" aria-controls="navbarColor03" aria-expanded="false" aria-label="Toggle navigation">
                   <span class="navbar-toggler-icon" id="toggler" onclick="hamburguerFunction()"></span>
                 </button>
@@ -35,7 +59,7 @@
                       <a class="nav-link" href="#">Introd. Al Coaching <span class="sr-only">(current)</span></a>
                     </li>
                     <li class="nav-item">
-                      <a class="nav-link" href="./vivenciales.html">Talleres Vivenciales</a>
+                      <a class="nav-link" href="<?php echo $vivenciales; ?>">Talleres Vivenciales</a>
                     </li>
                     <li class="nav-item">
                       <a class="nav-link" href="#">Coaching Personal</a>
@@ -47,37 +71,28 @@
                         <a class="nav-link" href="#">Contacto</a>
                     </li>
                           <li class="nav-item perfil-flex">
-                            <a href="./login.php" class="perfil">
+                            <a href="<?php echo $perfil; ?>" name="perfil" class="perfil">
                               <img src="./img/perfil.png" alt="perfil" class="perfil">
                               </a> 
                           </li> 
                           <li class="simbolo-mas">
-                            <a href="./register.php" class="mas">
+                            <a href="<?php echo $registrarse; ?>" name="registrarse" class="mas">
                               <img src="./img/plus.png" alt="mas" class="plus">
                             </a>
                           </li>
-                  </ul>
-                </div>
+				  </ul>
               </nav>
         </div>
     </header>
-<main>
-  <div class="row-horizontal">
-    <div class="rinoceronte-izquierda">
-      <img src="./img/rinoceronte.png" alt="rinoceronte" class="rinoceronte-left-side">
-      </div>
-      <a href="#"><img src="./img/live.png" alt="camara-livestreaming" class="live"></a>
-      <div class="texto-derecha">
-        <h1>El poder oculto</h1>
-      <p>Es un taller abierto para todo aquel que decida dar <br> comienzo o continuar con su desarrollo personal...</p>
-      <p>"Las herramientas que vamos develando en un plano <br> consciente no son útiles para darle forma a la vida que <br> queremos"</p>
-      <a href="./streaming.html" class="live-mobile">Ir al streaming.</a>
-      </div>
-  </div>
-  <a href="./register.php" class="btn-register">Registrate</a>
-</main>
-<footer>
-  <a href="https://wa.me/541162260320" target="_blank"><img src="./img/whatsapp.png" alt="whatsapp" class="whatsapp"></a>
-</footer>
+    <div class="container vivenciales">
+      <img src="./img/huevo.png" alt="huevo" class="huevo">
+<h1 class="creser-derecha"><span class="span-azul">CRE</span>SER</h1>
+<p class="p-creser">Un taller vivencial de 4 días basado en coaching ontológico, pnl <br> e impacto para el desarrollo humano. Una oportunidad única <br> para desafiarte y llegar a esos resultados que mereces tener. <br> Extraordinario, intenso y develador...</p>
+
+<div class="fechas">
+  <div class="1"><h3 class="dia-1"><small>Jue. </small> 07 <small> Vie. </small> 08 <small> Sáb. </small> 09 <small> Dom. </small> 10 </h3><p class="hs-blue">18 a 00hs 18 a 00hs 10 a 20hs 10 a 20hs</p></div>
+</div>
+<button class="btn-register register-vivenciales">Registrate</button>
+    </div>
 </body>
 </html>

@@ -55,8 +55,9 @@ if (isset($_POST['reg_user'])) {
   	$query = "INSERT INTO users (username, email, password) 
   			  VALUES('$username', '$email', '$password')";
   	mysqli_query($db, $query);
-  	$_SESSION['username'] = $username;
-  	$_SESSION['success'] = "You are now logged in";
+    $_SESSION['username'] = $username;
+    ini_set('session.cookie_lifetime',  10800);
+  	$_SESSION['success'] = "Ahora estás logueado!";
   	header('location: index.php');
   }
 }
@@ -79,7 +80,7 @@ if (isset($_POST['login_user'])) {
   	$results = mysqli_query($db, $query);
   	if (mysqli_num_rows($results) == 1) {
   	  $_SESSION['username'] = $username;
-  	  $_SESSION['success'] = "You are now logged in";
+  	  $_SESSION['success'] = "Ahora estás logueado!";
   	  header('location: index.php');
   	}else {
   		array_push($errors, "Wrong username/password combination");
