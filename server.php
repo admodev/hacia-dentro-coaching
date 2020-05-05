@@ -9,7 +9,7 @@ $errors = array();
 
 // Conectarse a la base de datos
 
-$db = mysqli_connect('localhost', 'root', '', 'registration');
+$db = mysqli_connect('localhost', 'root', '', 'haciadentro');
 
 // Registrar usuario
 
@@ -56,9 +56,9 @@ if (isset($_POST['reg_user'])) {
   			  VALUES('$username', '$email', '$password')";
   	mysqli_query($db, $query);
     $_SESSION['username'] = $username;
-    ini_set('session.cookie_lifetime',  10800);
   	$_SESSION['success'] = "Ahora estás logueado!";
-  	header('location: index.php');
+    header('location: index.php');
+    ini_set('session.cookie_lifetime',  10800);
   }
 }
 
@@ -81,7 +81,8 @@ if (isset($_POST['login_user'])) {
   	if (mysqli_num_rows($results) == 1) {
   	  $_SESSION['username'] = $username;
   	  $_SESSION['success'] = "Ahora estás logueado!";
-  	  header('location: index.php');
+      header('location: index.php');
+      ini_set('session.cookie_lifetime',  10800);
   	}else {
   		array_push($errors, "Wrong username/password combination");
   	}

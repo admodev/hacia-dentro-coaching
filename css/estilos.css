@@ -48,15 +48,17 @@ html {
 
 .row-horizontal {
   width: 100%;
-  height: 340px;
-  background-color: #dee7e4;
-  display: flex;
-  flex-direction: row;
+  background-image: url(../img/background-row.png);
+  background-repeat: no-repeat;
+  background-size: 100% 70%;
 }
 
-.row-horizontal::-webkit-scrollbar {
-  display: none;
-  }
+.row-horizontal-index {
+  width: 100%;
+  background-image: url(../img/background-row.png);
+  background-repeat: no-repeat;
+  background-size: 100% 100%;
+}
 
 .logo-menu {
   width: 25vw;
@@ -75,8 +77,6 @@ html {
   font-size:18px;
 	padding:12px 31px;
   text-decoration:none;
-  margin-top: 36px;
-  margin-left: 870px;
 }
 .btn-register:hover {
   background-color:#ffffff;
@@ -115,12 +115,6 @@ p {
   padding: 50px;
 }
 
-.login-form::after {
-  content: "";
-  display: table;
-  clear: both;
-}
-
 .live {
   position: absolute;
   width: 12vw;
@@ -148,19 +142,6 @@ p {
   display: none;
   }
 
-.background-login {
-  background-color: #fff;
-  width: 60vw;
-  height: 70vh;
-  overflow: auto;
-  margin-top: 50px;
-  margin-left: auto;
-  margin-right: auto;
-}
-
-.background-login::-webkit-scrollbar {
-  display: none;
-  }
 
 .correo {
   font-size: 1.5rem;
@@ -170,13 +151,6 @@ p {
 .contraseña {
   font-size: 1.5rem;
   margin-left: 10px;
-}
-
-.login-form {
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  margin-left: 150px;
 }
 
 .submit {
@@ -319,162 +293,152 @@ p {
   display: none;
 }
 
-@media (min-width: 250px) and (max-width: 991.98px) {
-  .rinoceronte-left-side {
-    position: relative;
-    width: auto;
-    margin-top: 400px;
-  }
-  .texto-derecha {
-    position: absolute;
-    width: auto;
-    margin-left: -30px;
-  }
-
-  .texto-derecha::-webkit-scrollbar {
-    display: none;
-    }
-
-  .live {
-    position: absolute;
-    width: 100px;
-    margin-top: 385px;
-    margin-left: 170px;
-  }
-
-  .whatsapp {
-    position: absolute;
-    width: 100px;
-    margin-top: 380px;
-    margin-left: 280px;
-  }
-
-  .btn-register {
-    display: none;
-  }
-
-  .row-horizontal {
-    width: auto ;
-    height: 100%;
-  }
-
-  .row-horizontal::-webkit-scrollbar {
-    display: none;
-    }
-
-  .perfil {
-    transform: translate(-140px, 20px);
-    width: 40px;
-    height: 40px;
-  }
-  .plus {
-    transform: translate(60px, -38px);
-    width: 28px;
-    height: 28px;
-  }
-  .logo-menu {
-    width: 320px;
-    height: 120px;
-    margin-left: -60px;
-  }
-
-  .correo, .contraseña {
-    transform: translate(-150px, -20px);
-  }
-
-  .username, .password {
-    transform: translate(-120px, -20px);
-  }
-
-  .submit {
-    margin-left: -60px;
-    width: 15vw;
-    height: 7vh;
-  }
-
-  .background-horizontal {
-    width: 100%;
-    height: 100%;
-    overflow-y: auto;
-  }
-
-  .login-form {
-    width: auto;
-    height: 100%;
-  }
-
-  form {
-    position: absolute;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-  }
-
-  .background-signup {
-    position: relative;
-    width: 800px;
-    height: 1600px;
-    margin: 12px;
-    overflow-y: auto;
-  }
-
-  .formulario {
-    position: absolute;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-  }
-
-  .signup-form {
-    position: absolute;
-    width: auto;
-    height: 100%;
-    display: flex;
-    flex-direction: column;
-   justify-content: center;
-   margin-top: -120px;
-   margin-left: -20px;
-  }
-
-  .live-mobile {
-    display: initial;
-    text-decoration: none;
-  }
-
-  .live-mobile:hover {
-    text-decoration: none;
-  }
-
-  .vivenciales {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-  }
-
-  select#country.form-control {
-    width: 60px
-  }
-
-  div.row {
-    margin-top: 250px;
-    margin-right: 50px;
-    margin-bottom: 50px;
-    margin-left: 50px;
-  }
-
-  input#submitDetails.submit {
-    width: 23vw;
-    margin-left: 180px;
-    margin-bottom: 20px;
-  }
+.btn-login {
+  background: #5F9EA0;
+  color: #000000;
+	border-radius:35px;
+	border:2px solid #000000;
+	display:inline-block;
+	cursor:pointer;
+	font-family:Verdana;
+  font-size:14px;
+	padding:6px 12px;
+  text-decoration:none;
 }
 
-html, body {
-  position: static;
-  overflow: auto;
-  height: 100%;
-  min-height:100%; 
+/* LOGIN & REGISTER */
+
+.notificacion-login {
+  width: 30%;
+  margin: 50px auto 0px;
+  color: white;
+  background: #5F9EA0;
+  text-align: center;
+  border: 1px solid #B0C4DE;
+  border-bottom: none;
+  border-radius: 10px 10px 0px 0px;
+  padding: 20px;
+}
+
+form {
+  width: 500px;
+  padding: 20px;
+  border: 1px solid #B0C4DE;
+  background-color: white;
+  border-radius: 0px 0px 10px 10px;
+}
+
+.input-group {
+  margin: 10px 0px 10px 0px;
+}
+
+.input-group input {
+  height: 30px;
+  width: 93%;
+  padding: 5px 10px;
+  font-size: 16px;
+  border-radius: 5px;
+  border: 1px solid gray;
+}
+
+.btn {
+  padding: 10px;
+  font-size: 15px;
+  color: white;
+  
+  border: none;
+  border-radius: 5px;
+}
+
+.error {
+  width: 92%; 
+  margin: 0px auto; 
+  padding: 10px; 
+  border: 1px solid #a94442; 
+  color: #a94442; 
+  background: #f2dede; 
+  border-radius: 5px; 
+  text-align: left;
+}
+
+.success {
+  color: #3c763d; 
+  background: #dff0d8; 
+  border: 1px solid #3c763d;
+  margin-bottom: 20px;
+}
+
+@media (min-width: 320px) and (max-width: 767px) {
+  form, .content {
+    width: 900px;
+    margin: 0px auto;
+    padding: 20px;
+    border: 1px solid #B0C4DE;
+    background: white;
+    border-radius: 0px 0px 10px 10px;
+  }
+
+  .input-group {
+    margin: 10px 0px 10px 0px;
+  }
+  
+  .input-group input {
+    height: 30px;
+    width: 93%;
+    padding: 5px 10px;
+    font-size: 16px;
+    border-radius: 5px;
+    border: 1px solid gray;
+  }
+  
+  .btn {
+    padding: 10px;
+    font-size: 15px;
+    color: white;
+    
+    border: none;
+    border-radius: 5px;
+  }
+  
+  .error {
+    width: 92%; 
+    margin: 0px auto; 
+    padding: 10px; 
+    border: 1px solid #a94442; 
+    color: #a94442; 
+    background: #f2dede; 
+    border-radius: 5px; 
+    text-align: left;
+  }
+  
+  .success {
+    color: #3c763d; 
+    background: #dff0d8; 
+    border: 1px solid #3c763d;
+    margin-bottom: 20px;
+  }
+
+  html {
+    width: 100%;
+    height: 100%;
+    box-sizing: border-box;
+  }
+
+  body {
+    width: 100%;
+    height: 100%;
+  }
+
+  header {
+    width: 100%;
+  }
+
+  nav, .navbar, .navbar-expand-lg, .navbar-light {
+    width: 100%;
+  }
+
+  .row-compras {
+    display: flex;
+    flex-direction: column !important;
+  }
 }

@@ -26,10 +26,9 @@
 <html>
 <head>
 	<title>HaciaDentro Coaching</title>
-	<link rel="stylesheet" type="text/css" href="style.css">
-	<link rel="stylesheet" href="./node_modules/normalize.css/normalize.css">
     <link rel="stylesheet" href="./css/bootstrap.min.css">
     <link rel="stylesheet" href="./css/estilos.css">
+    <link rel="stylesheet" href="./css/mediaqueries.sass">
     <link href="https://fonts.googleapis.com/css?family=Bebas+Neue|Roboto:400,700&display=swap" rel="stylesheet">
     <link rel="apple-touch-icon" sizes="76x76" href="./img/apple-touch-icon.png">
 <link rel="icon" type="image/png" sizes="32x32" href="./img/favicon-32x32.png">
@@ -55,7 +54,7 @@
                 <div class="collapse navbar-collapse" id="navbarColor03">
                   <ul class="navbar-nav mr-auto ml-5">
                     <li class="nav-item active">
-                      <a class="nav-link" href="#">Introd. Al Coaching <span class="sr-only">(current)</span></a>
+                      <a class="nav-link" href="#">Coaching Online <span class="sr-only">(current)</span></a>
                     </li>
                     <li class="nav-item">
                       <a class="nav-link" href="<?php echo $vivenciales; ?>">Talleres Vivenciales</a>
@@ -84,19 +83,41 @@
         </div>
     </header>
 <main>
-  <div class="row-horizontal">
-    <div class="rinoceronte-izquierda">
-      <img src="./img/rinoceronte.png" alt="rinoceronte" class="rinoceronte-left-side">
-      </div>
-      <a href="<?php echo $streaming; ?>" name="streaming"><img src="./img/live.png" alt="camara-livestreaming" class="live"></a>
-      <div class="texto-derecha">
-        <h1>El poder oculto</h1>
-      <p>Es un taller abierto para todo aquel que decida dar <br> comienzo o continuar con su desarrollo personal...</p>
-      <p>"Las herramientas que vamos develando en un plano <br> consciente no son útiles para darle forma a la vida que <br> queremos"</p>
-      <a href="./streaming.html" class="live-mobile">Ir al streaming.</a>
-      </div>
+<div class="row-horizontal row-horizontal-index">
+  <br></br>
+<div class="row-compras d-flex flex-row">
+<div class="card-group">
+  <div class="card ml-2 mr-2" style="max-height: 300px; max-width: 300px;">
+    <img src="./img/compras-uno.jpeg" class="card-img-top" alt="compras-uno" style="max-height: 300px; max-width: 300px;">
+    <div class="card-body">
+      <a href="#" class="card-text text-info text-decoration-none float-right">+ info</a>
+      <p class="card-text"><a href="<?php echo $registrarse; ?>" name="registrarse" class="btn-register ml-5">Registrate</a></p>
+    </div>
   </div>
-  <a href="<?php echo $registrarse; ?>" name="registrarse" class="btn-register">Registrate</a>
+  <div class="card card ml-2 mr-2" style="max-height: 300px; max-width: 300px;">
+    <img src="./img/compras-dos.jpeg" class="card-img-top" alt="compras-dos" style="max-height: 300px; max-width: 300px;">
+    <div class="card-body">
+    <a href="#" class="card-text text-info text-decoration-none float-right"">+ info</a>
+    <p class="card-text"><a href="<?php echo $registrarse; ?>" name="registrarse" class="btn-register ml-5">Registrate</a></p>
+    </div>
+  </div>
+  <div class="card card ml-2 mr-2" style="max-height: 300px; max-width: 300px;">
+    <img src="./img/compras-tres.jpeg" class="card-img-top" alt="compras-tres" style="max-height: 300px; max-width: 300px;">
+    <div class="card-body">
+    <a href="#" class="card-text text-info text-decoration-none float-right"">+ info</a>
+    <p class="card-text"><a href="<?php echo $registrarse; ?>" name="registrarse" class="btn-register ml-5">Registrate</a></p>
+    </div>
+  </div>
+  <div class="card card ml-2 mr-2" style="max-height: 300px; max-width: 300px;">
+    <img src="./img/compras-cuatro.jpeg" class="card-img-top" alt="compras-tres" style="max-height: 300px; max-width: 300px;">
+    <div class="card-body">
+    <a href="#" class="card-text text-info text-decoration-none float-right"">+ info</a>
+    <p class="card-text"><a href="<?php echo $registrarse; ?>" name="registrarse" class="btn-register ml-5">Registrate</a></p>
+    </div>
+  </div>
+</div>
+</div>
+  </div>
 </main>
 <footer>
   <a href="https://wa.me/541162260320" target="_blank"><img src="./img/whatsapp.png" alt="whatsapp" class="whatsapp"></a>
